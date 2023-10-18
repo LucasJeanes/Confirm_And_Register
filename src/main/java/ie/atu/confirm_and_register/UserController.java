@@ -16,7 +16,7 @@ public class UserController {
     @PostMapping("/confirm-and-register")
     public String confirmAndRegister(@RequestBody UserDetails userDetails) {
         String confirm = registrationServiceClient.inputtedDetails(userDetails);
-        confirm = String.format("%s.\nThank you %s, your registration is complete.", confirm, userDetails.getName());
+        //confirm = String.format("%s.\nThank you %s, your registration is complete.", confirm, userDetails.getName());
         return confirm;
     }
 }
